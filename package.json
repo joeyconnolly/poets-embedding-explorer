@@ -2,7 +2,7 @@
   "name": "poets-embedding-explorer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/poets-embedding-explorer",
+  "homepage": "https://joeyconnolly.github.io/poets-embedding-explorer",
   "dependencies": {
     "@tensorflow/tfjs": "^4.4.0",
     "d3": "^7.8.5",
