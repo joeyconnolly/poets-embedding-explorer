@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poet's Embedding Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-600 mb-4">Poet's Embedding Explorer</h1>
+            <p class="text-gray-600">Interactive exploration of transformer embeddings for poetic inspiration</p>
+        </header>
+
+        <div class="bg-white shadow-xl rounded-lg p-8 mb-8">
+            <div class="flex justify-center mb-6">
+                <div class="border-b border-indigo-200 flex flex-wrap">
+                    <button class="px-6 py-3 text-indigo-700 border-b-2 border-indigo-600 font-medium">Getting Started</button>
+                    <button class="px-6 py-3 text-gray-500 hover:text-indigo-600">Word Explorer</button>
+                    <button class="px-6 py-3 text-gray-500 hover:text-indigo-600">Analogy Machine</button>
+                    <button class="px-6 py-3 text-gray-500 hover:text-indigo-600">Sonnet Generator</button>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">Welcome to Poet's Embedding Explorer</h2>
+                <p class="mb-4">This application allows poets to explore the semantic space of words through transformer embeddings.</p>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-medium mb-2">To get started, you'll need an API key:</h3>
+                    <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+                        <div class="flex-1 p-4 border border-gray-200 rounded-lg">
+                            <h4 class="font-medium text-indigo-600 mb-2">Hugging Face API</h4>
+                            <p class="text-sm mb-2">Free and easy to obtain, perfect for exploration</p>
+                            <a href="https://huggingface.co/settings/tokens" target="_blank" class="text-sm text-indigo-600 hover:underline">Get a key →</a>
+                        </div>
+                        <div class="flex-1 p-4 border border-gray-200 rounded-lg">
+                            <h4 class="font-medium text-indigo-600 mb-2">OpenAI API</h4>
+                            <p class="text-sm mb-2">Requires payment method, but powerful embeddings</p>
+                            <a href="https://platform.openai.com/account/api-keys" target="_blank" class="text-sm text-indigo-600 hover:underline">Get a key →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-indigo-50 rounded-lg">
+                    <h3 class="text-lg font-medium mb-2">Coming Soon</h3>
+                    <p>The full interactive application is currently being set up. Check back soon for all features!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>Built for GitHub Pages | Using Transformer Embeddings</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic demo functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Reset all buttons
+                    buttons.forEach(b => {
+                        b.classList.remove('border-b-2', 'border-indigo-600', 'text-indigo-700');
+                        b.classList.add('text-gray-500');
+                    });
+                    
+                    // Highlight the clicked button
+                    button.classList.remove('text-gray-500');
+                    button.classList.add('border-b-2', 'border-indigo-600', 'text-indigo-700');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
